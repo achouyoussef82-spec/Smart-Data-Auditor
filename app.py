@@ -4,16 +4,26 @@ import polars as pl
 # Configuration de la page
 st.set_page_config(page_title="Smart Data Auditor", layout="wide")
 
-st.title("🛡️ Smart Data Auditor 2026")
-st.markdown("---")
-
 # --- 1. CHARGEMENT DES DONNÉES ---
 uploaded_file = st.file_uploader("Étape 1 : Dépose ton fichier CSV", type="csv")
 
 if uploaded_file:
-    # Lecture des données
-    df = pl.read_csv(uploaded_file)
-    
+    try:
+        # Tentative 1 : UTF-8
+        df = pl.read_csv(uploaded_file, infer_schema_length=10000, ignore_errors=True)
+    except Exception:
+        # Tentative 2 : Latin-1 si l'UTF-8 échoue
+        uploaded_file.seek(0)
+        try:
+            df = pl.read_csv(uploaded_file, encoding="iso-8859-1", infer_schema_length=10000, ignore_errors=True)
+        except Exception as e:
+            st.error(f"Erreur critique de lecture : {e}")
+            st.stop()
+
+    # La suite du code (st.write, etc.) doit être alignée ici, à l'intérieur du "if"
+    st.write("### 📊 Aperçu des données brutes")
+    st.dataframe(df.head(10))
+        
     # Affichage du tableau
     st.write("### 📊 Aperçu des données brutes")
     st.dataframe(df.head(10))
@@ -62,30 +72,7 @@ else:
     st.info("👋 Bonjour ! Pour commencer, importe un fichier CSV dans le module ci-dessus.")
 
 
-# --- 4. VISUALISATION AUTOMATIQUE ---
-st.write("### 📈 Visualisation des données")
 
-if st.checkbox("Afficher les graphiques"):
-    # On sépare les colonnes par type
-    num_cols = [col for col in df.columns if df[col].dtype in [pl.Int64, pl.Float64]]
-    cat_cols = [col for col in df.columns if df[col].dtype == pl.String]
-
-    col_chart1, col_chart2 = st.columns(2)
-
-    with col_chart1:
-        if num_cols:
-            st.write("#### Distribution des âges (ou autres nombres)")
-            # Graphique simple avec Streamlit
-            st.bar_chart(df.select(num_cols[0])) 
-        else:
-            st.info("Aucune donnée numérique pour un graphique.")
-
-    with col_chart2:
-        if cat_cols:
-            st.write("#### Répartition par Ville (ou catégories)")
-            # On compte les occurrences et on affiche
-            counts = df[cat_cols[0]].value_counts()
-            st.bar_chart(data=counts, x=cat_cols[0], y="count")
 
 from langchain_experimental.agents import create_csv_agent
 from langchain_openai import ChatOpenAI
