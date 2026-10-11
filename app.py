@@ -15,7 +15,7 @@ MAX_RESULT_ROWS = 100
 # Streamlit relance le script à chaque clic : on garde le tableau nettoyé
 # et l'historique du chat dans st.session_state.
 def init_state():
-    defaults = {"df": None, "file_id": None, "log": [], "chat": []}
+    defaults = {"df": None, "file_id": None, "file_name": "", "log": [], "chat": []}
     for key, value in defaults.items():
         st.session_state.setdefault(key, value)
 
@@ -57,21 +57,35 @@ st.title("🛡️ Smart Data Auditor")
 st.caption("Auditez, nettoyez et interrogez vos données en langage naturel.")
 
 # --- 1. CHARGEMENT ---
+SAMPLE_PATH = os.path.join(os.path.dirname(__file__), "sample_data", "ventes_exemple.csv")
+
 uploaded_file = st.file_uploader("Déposez votre fichier CSV", type="csv")
 
-if uploaded_file is None:
-    st.info("👋 Pour commencer, importez un fichier CSV.")
-    st.stop()
 
-if st.session_state.file_id != uploaded_file.file_id:
+def load_source(file, file_id: str, name: str):
     try:
-        st.session_state.df = read_csv(uploaded_file)
+        st.session_state.df = read_csv(file)
     except ValueError as e:
         st.error(str(e))
         st.stop()
-    st.session_state.file_id = uploaded_file.file_id
+    st.session_state.file_id = file_id
+    st.session_state.file_name = name
     st.session_state.log = []
     st.session_state.chat = []
+
+
+if uploaded_file is not None:
+    if st.session_state.file_id != uploaded_file.file_id:
+        load_source(uploaded_file, uploaded_file.file_id, uploaded_file.name)
+elif st.session_state.file_id != "sample":
+    st.info("👋 Pour commencer, importez un fichier CSV, ou testez avec notre fichier d'exemple.")
+    if st.button("🧪 Essayer avec un fichier d'exemple (500 ventes)"):
+        with open(SAMPLE_PATH, "rb") as f:
+            load_source(f, "sample", "ventes_exemple.csv")
+        st.rerun()
+    st.stop()
+else:
+    st.caption("📄 Fichier d'exemple chargé : 500 ventes fictives, avec des doublons et des erreurs à nettoyer.")
 
 df: pl.DataFrame = st.session_state.df
 
@@ -141,7 +155,7 @@ with tab_clean:
     st.download_button(
         label="📥 Télécharger le fichier nettoyé",
         data=df.write_csv(),
-        file_name=f"{os.path.splitext(uploaded_file.name)[0]}_clean.csv",
+        file_name=f"{os.path.splitext(st.session_state.file_name)[0]}_clean.csv",
         mime="text/csv",
     )
 

@@ -1,5 +1,7 @@
 # 🛡️ Smart Data Auditor
 
+> 🚀 **Essayer en ligne : [smart-data-auditor-synerbyte.streamlit.app](https://smart-data-auditor-synerbyte.streamlit.app/)** (bouton « Essayer avec un fichier d'exemple » inclus)
+
 Application web qui **audite, nettoie et analyse** un fichier CSV en quelques clics, et permet de **poser des questions sur ses données en langage naturel** grâce à l'IA (Claude, d'Anthropic).
 
 > Projet réalisé par Youssef Achou, [Synerbyte Technologies](https://synerbyte.eu) : Data, IA & Automatisation.
