@@ -2,7 +2,7 @@
 
 Application web qui **audite, nettoie et analyse** un fichier CSV en quelques clics, et permet de **poser des questions sur ses données en langage naturel** grâce à l'IA (Claude, d'Anthropic).
 
-> Projet réalisé par Youssef Achou, [Merivo](https://merivo.fr) : Data, IA & Automatisation.
+> Projet réalisé par Youssef Achou, [Synerbyte Technologies](https://synerbyte-technologies.fr) : Data, IA & Automatisation.
 
 ## ✨ Fonctionnalités
 
