@@ -41,4 +41,4 @@ Un fichier d'exemple est fourni : `sample_data/ventes_exemple.csv` (500 commande
 
 ## 📫 Contact
 
-[LinkedIn](https://www.linkedin.com/in/youssef-youssef-5218a83b9) · Disponible pour des missions data et IA en France et en Europe.
+[LinkedIn](https://www.linkedin.com/in/youssef-achou-5218a83b9) · Disponible pour des missions data et IA en France et en Europe.
