@@ -1,0 +1,513 @@
+Commande,Date,Client,Ville,Produit,Categorie,Quantite,Prix Unitaire,Montant
+CMD0001,2026-07-22,CLI013,Paris,Webcam HD,Informatique,2,69,138
+CMD0002,2026-01-30,CLI130,Lyon,Enceinte Bluetooth,Audio,3,59,177
+CMD0003,2026-08-11,CLI108,Paris,Casque audio,Audio,1,89,89
+CMD0004,2026-08-06,CLI016,Toulouse,Souris sans fil,Informatique,1,35,35
+CMD0005,2026-02-01,CLI102,Paris,Enceinte Bluetooth,Audio,2,59,118
+CMD0006,2026-03-10,CLI075,Lille,Souris sans fil,Informatique,1,35,35
+CMD0007,2026-06-07,CLI047,Paris,Clavier mécanique,Informatique,1,119,119
+CMD0008,2026-02-19,CLI017,Bordeaux,Souris sans fil,Informatique,3,35,105
+CMD0009,2026-09-12,CLI137,Lille,Casque audio,Audio,2,89,178
+CMD0010,2026-08-21,CLI093,Marseille,Webcam HD,Informatique,4,69,276
+CMD0011,2026-05-05,CLI021,Bordeaux,Souris sans fil,Informatique,2,35,70
+CMD0012,2026-06-25,CLI115,Marseille,Écran 27 pouces,Informatique,4,249,996
+CMD0013,2026-09-20,CLI108,,Enceinte Bluetooth,Audio,1,59,59
+CMD0014,2026-09-08,CLI108,Paris,Webcam HD,Informatique,2,69,138
+CMD0015,2026-06-24,CLI090,Bordeaux,Enceinte Bluetooth,Audio,3,59,177
+CMD0016,2026-02-05,CLI024,Marseille,Ampoule connectée,Objets connectés,4,25,100
+CMD0017,2026-02-01,CLI080,Nantes,Ampoule connectée,Objets connectés,1,25,25
+CMD0018,2026-07-17,CLI089,Paris,Ampoule connectée,Objets connectés,3,25,75
+CMD0019,2026-03-28,CLI030,Lille,Ampoule connectée,Objets connectés,3,25,75
+CMD0020,2026-05-28,CLI034,Nantes,Casque audio,Audio,2,89,178
+CMD0021,2026-07-20,CLI128,Paris,  Souris sans fil ,Informatique,4,35,140
+CMD0022,2026-07-25,CLI072,Lyon,Clavier mécanique,Informatique,4,119,476
+CMD0023,2026-08-01,CLI092,Nantes,Montre connectée,Objets connectés,3,199,597
+CMD0024,2026-03-19,CLI022,Lyon,Montre connectée,Objets connectés,2,199,398
+CMD0025,2026-04-30,CLI004,Lille,Clavier mécanique,Informatique,2,119,238
+CMD0026,2026-05-25,CLI002,Lyon,Clavier mécanique,Informatique,3,119,357
+CMD0027,2026-06-13,CLI033,Nantes,Montre connectée,Objets connectés,3,199,597
+CMD0028,2026-07-20,CLI102,Lille,Casque audio,Audio,4,89,356
+CMD0029,2026-09-04,CLI103,Paris,Montre connectée,Objets connectés,1,199,199
+CMD0030,2026-04-17,CLI113,Lyon,Souris sans fil,Informatique,1,35,35
+CMD0031,2026-01-27,CLI027,Paris,Enceinte Bluetooth,Audio,3,59,177
+CMD0032,2026-07-06,CLI007,Paris,Clavier mécanique,Informatique,1,119,119
+CMD0033,2026-03-18,CLI065,Marseille,Souris sans fil,Informatique,4,35,140
+CMD0034,2026-03-04,CLI030,,Webcam HD,Informatique,4,69,276
+CMD0035,2026-09-03,CLI124,Marseille,Ampoule connectée,Objets connectés,4,25,100
+CMD0036,2026-02-22,CLI088,Nantes,Enceinte Bluetooth,Audio,2,59,118
+CMD0037,2026-03-24,CLI133,Paris,Écran 27 pouces,Informatique,4,249,996
+CMD0038,2026-03-17,CLI140,Paris,Souris sans fil,Informatique,3,35,105
+CMD0039,2026-05-14,CLI133,Marseille,Écran 27 pouces,Informatique,1,249,249
+CMD0040,2026-04-25,CLI137,Bordeaux,Clavier mécanique,Informatique,3,119,357
+CMD0041,2026-04-10,CLI062,Toulouse,Webcam HD,Informatique,2,69,138
+CMD0042,2026-04-13,CLI133,Lille,Montre connectée,Objets connectés,2,199,398
+CMD0043,2026-01-15,CLI072,Lille,Webcam HD,Informatique,1,69,69
+CMD0044,2026-06-26,CLI115,Toulouse,Écran 27 pouces,Informatique,2,249,498
+CMD0045,2026-02-11,CLI057,Paris,  Webcam HD ,Informatique,3,69,207
+CMD0046,2026-04-11,CLI087,Lyon,Souris sans fil,Informatique,4,35,140
+CMD0047,2026-09-03,CLI089,Toulouse,Ampoule connectée,Objets connectés,1,25,25
+CMD0048,2026-07-18,CLI052,Lille,Enceinte Bluetooth,Audio,1,59,59
+CMD0049,2026-06-20,CLI023,Toulouse,Clavier mécanique,Informatique,4,119,476
+CMD0050,2026-07-25,CLI022,Nantes,Montre connectée,Objets connectés,4,199,796
+CMD0051,2026-03-07,CLI008,Lyon,Clavier mécanique,Informatique,2,119,238
+CMD0052,2026-08-31,CLI090,Lyon,Ampoule connectée,Objets connectés,2,25,50
+CMD0053,2026-01-08,CLI027,Bordeaux,Clavier mécanique,Informatique,1,119,119
+CMD0054,2026-04-10,CLI055,Paris,Clavier mécanique,Informatique,4,119,476
+CMD0055,2026-05-30,CLI129,Lyon,Écran 27 pouces,Informatique,2,249,498
+CMD0056,2026-08-03,CLI034,Paris,  Webcam HD ,Informatique,3,69,207
+CMD0057,2026-09-22,CLI108,Toulouse,Webcam HD,Informatique,4,69,276
+CMD0058,2026-09-26,CLI131,Paris,Clavier mécanique,Informatique,2,119,238
+CMD0059,2026-01-03,CLI039,Lyon,Ampoule connectée,Objets connectés,2,25,50
+CMD0060,2026-03-03,CLI016,Marseille,Clavier mécanique,Informatique,4,119,476
+CMD0061,2026-01-30,CLI064,Lyon,Ampoule connectée,Objets connectés,1,25,25
+CMD0062,2026-02-20,CLI130,Lille,Écran 27 pouces,Informatique,1,249,249
+CMD0063,2026-08-15,CLI084,Bordeaux,Casque audio,Audio,1,89,89
+CMD0064,2026-08-20,CLI131,,Souris sans fil,Informatique,3,35,105
+CMD0065,2026-09-25,CLI067,,Ampoule connectée,Objets connectés,2,25,50
+CMD0066,2026-03-12,CLI107,Paris,Souris sans fil,Informatique,4,35,140
+CMD0067,2026-06-11,CLI019,Nantes,Montre connectée,Objets connectés,4,199,796
+CMD0068,2026-02-07,CLI055,Nantes,Souris sans fil,Informatique,4,35,140
+CMD0069,2026-03-21,CLI094,Lyon,Écran 27 pouces,Informatique,1,249,249
+CMD0070,2026-08-28,CLI057,Nantes,Écran 27 pouces,Informatique,2,249,498
+CMD0071,2026-09-07,CLI042,Nantes,Enceinte Bluetooth,Audio,4,59,236
+CMD0072,2026-08-09,CLI132,Lille,Souris sans fil,Informatique,2,35,70
+CMD0073,2026-04-11,CLI092,Marseille,Webcam HD,Informatique,4,69,276
+CMD0074,2026-01-10,CLI087,Bordeaux,Enceinte Bluetooth,Audio,3,59,177
+CMD0075,2026-01-10,CLI099,Marseille,Ampoule connectée,Objets connectés,4,25,100
+CMD0076,2026-02-27,CLI059,Paris,Écran 27 pouces,Informatique,1,249,249
+CMD0077,2026-05-20,CLI011,Toulouse,Enceinte Bluetooth,Audio,3,59,177
+CMD0078,2026-03-08,CLI109,Toulouse,Clavier mécanique,Informatique,3,119,357
+CMD0079,2026-03-18,CLI138,Bordeaux,Écran 27 pouces,Informatique,4,249,996
+CMD0080,2026-02-15,CLI072,Paris,Ampoule connectée,Objets connectés,3,25,75
+CMD0081,2026-02-07,CLI069,Paris,Clavier mécanique,Informatique,4,119,476
+CMD0082,2026-02-12,CLI057,Paris,Enceinte Bluetooth,Audio,3,59,177
+CMD0083,2026-08-21,CLI003,Marseille,Écran 27 pouces,Informatique,1,249,249
+CMD0084,2026-03-08,CLI012,Bordeaux,Montre connectée,Objets connectés,3,199,597
+CMD0085,2026-03-24,CLI068,Paris,Souris sans fil,Informatique,1,35,35
+CMD0086,2026-06-09,CLI079,Bordeaux,Clavier mécanique,Informatique,2,119,238
+CMD0087,2026-08-17,CLI129,Nantes,Souris sans fil,Informatique,3,35,105
+CMD0088,2026-06-27,CLI005,Marseille,Clavier mécanique,Informatique,3,119,357
+CMD0089,2026-01-10,CLI130,Bordeaux,Casque audio,Audio,1,89,89
+CMD0090,2026-05-06,CLI115,Paris,Souris sans fil,Informatique,4,35,140
+CMD0091,2026-07-21,CLI130,Marseille,Montre connectée,Objets connectés,4,199,796
+CMD0092,2026-06-25,CLI051,Toulouse,Souris sans fil,Informatique,2,35,70
+CMD0093,2026-06-27,CLI014,Toulouse,Clavier mécanique,Informatique,4,119,476
+CMD0094,2026-02-06,CLI066,Lille,Clavier mécanique,Informatique,1,119,119
+CMD0095,2026-02-13,CLI098,Toulouse,Clavier mécanique,Informatique,1,119,119
+CMD0096,2026-05-31,CLI012,Lille,Écran 27 pouces,Informatique,2,249,498
+CMD0097,2026-05-18,CLI115,Paris,Clavier mécanique,Informatique,2,119,238
+CMD0098,2026-06-18,CLI083,Lyon,Écran 27 pouces,Informatique,3,249,747
+CMD0099,2026-04-22,CLI092,Lyon,Casque audio,Audio,3,89,267
+CMD0100,2026-07-15,CLI022,Lille,Casque audio,Audio,3,89,267
+CMD0101,2026-05-08,CLI130,Toulouse,Écran 27 pouces,Informatique,2,249,498
+CMD0102,2026-05-16,CLI023,,Casque audio,Audio,1,89,89
+CMD0103,2026-07-21,CLI006,Marseille,Montre connectée,Objets connectés,1,199,199
+CMD0104,2026-02-13,CLI136,Toulouse,Écran 27 pouces,Informatique,2,249,498
+CMD0105,2026-06-16,CLI127,Lyon,Clavier mécanique,Informatique,4,119,476
+CMD0106,2026-01-23,CLI132,Nantes,Écran 27 pouces,Informatique,2,249,498
+CMD0107,2026-09-26,CLI130,Bordeaux,Montre connectée,Objets connectés,2,199,398
+CMD0108,2026-02-13,CLI008,Paris,Casque audio,Audio,2,89,178
+CMD0109,2026-02-23,CLI097,Toulouse,Clavier mécanique,Informatique,3,119,357
+CMD0110,2026-01-10,CLI137,Nantes,Ampoule connectée,Objets connectés,1,25,25
+CMD0111,2026-05-16,CLI001,Lille,Souris sans fil,Informatique,4,35,140
+CMD0112,2026-09-27,CLI017,Nantes,Enceinte Bluetooth,Audio,1,59,59
+CMD0113,2026-02-08,CLI068,Lyon,Ampoule connectée,Objets connectés,3,25,75
+CMD0114,2026-08-24,CLI127,Toulouse,Souris sans fil,Informatique,2,35,70
+CMD0115,2026-09-03,CLI074,Toulouse,Montre connectée,Objets connectés,1,199,199
+CMD0116,2026-02-09,CLI038,Marseille,Casque audio,Audio,2,89,178
+CMD0117,2026-03-10,CLI004,Lille,Écran 27 pouces,Informatique,3,249,747
+CMD0118,2026-05-18,CLI026,Nantes,Casque audio,Audio,4,89,356
+CMD0119,2026-05-29,CLI133,Marseille,Souris sans fil,Informatique,4,35,140
+CMD0120,2026-08-27,CLI031,Bordeaux,Ampoule connectée,Objets connectés,4,25,100
+CMD0121,2026-02-13,CLI122,Paris,Souris sans fil,Informatique,3,35,105
+CMD0122,2026-02-09,CLI130,Lille,Écran 27 pouces,Informatique,4,249,996
+CMD0123,2026-04-18,CLI054,Paris,Écran 27 pouces,Informatique,4,249,996
+CMD0124,2026-09-26,CLI068,Marseille,Enceinte Bluetooth,Audio,2,59,118
+CMD0125,2026-02-27,CLI094,Lyon,Clavier mécanique,Informatique,3,119,357
+CMD0126,2026-07-21,CLI007,Lyon,Ampoule connectée,Objets connectés,4,25,100
+CMD0127,2026-08-19,CLI104,Marseille,Casque audio,Audio,4,89,356
+CMD0128,2026-06-26,CLI097,Marseille,Clavier mécanique,Informatique,4,119,476
+CMD0129,2026-01-01,CLI084,Toulouse,Enceinte Bluetooth,Audio,3,59,177
+CMD0130,2026-03-03,CLI051,Nantes,Webcam HD,Informatique,4,69,276
+CMD0131,2026-05-10,CLI096,Paris,Casque audio,Audio,3,89,267
+CMD0132,2026-02-09,CLI093,Lille,Montre connectée,Objets connectés,4,199,796
+CMD0133,2026-05-24,CLI027,Paris,Écran 27 pouces,Informatique,1,249,249
+CMD0134,2026-05-08,CLI069,Lille,Écran 27 pouces,Informatique,2,249,498
+CMD0135,2026-07-11,CLI110,Paris,Webcam HD,Informatique,2,69,138
+CMD0136,2026-02-11,CLI013,Nantes,Montre connectée,Objets connectés,2,199,398
+CMD0137,2026-03-12,CLI074,Lille,Montre connectée,Objets connectés,4,199,796
+CMD0138,2026-03-29,CLI121,Lille,Casque audio,Audio,2,89,178
+CMD0139,2026-06-02,CLI066,Nantes,Webcam HD,Informatique,3,69,207
+CMD0140,2026-05-03,CLI078,Lille,Écran 27 pouces,Informatique,4,249,996
+CMD0141,2026-03-27,CLI042,Paris,Montre connectée,Objets connectés,1,199,199
+CMD0142,2026-04-23,CLI116,Marseille,Souris sans fil,Informatique,4,35,140
+CMD0143,2026-03-13,CLI050,Lyon,Ampoule connectée,Objets connectés,4,25,100
+CMD0144,2026-06-25,CLI024,Marseille,Enceinte Bluetooth,Audio,2,59,118
+CMD0145,2026-05-13,CLI052,Paris,Souris sans fil,Informatique,3,35,105
+CMD0146,2026-07-31,CLI135,Lyon,Montre connectée,Objets connectés,4,199,796
+CMD0147,2026-06-23,CLI016,Lille,Montre connectée,Objets connectés,3,199,597
+CMD0148,2026-03-06,CLI129,,Écran 27 pouces,Informatique,3,249,747
+CMD0149,2026-05-19,CLI064,Lille,Souris sans fil,Informatique,1,35,35
+CMD0150,2026-08-10,CLI080,Toulouse,Montre connectée,Objets connectés,4,199,796
+CMD0151,2026-01-17,CLI109,Nantes,Casque audio,Audio,2,89,178
+CMD0152,2026-01-01,CLI019,Lille,Ampoule connectée,Objets connectés,4,25,100
+CMD0153,2026-05-08,CLI028,Lyon,Ampoule connectée,Objets connectés,4,25,100
+CMD0154,2026-09-25,CLI028,Toulouse,Clavier mécanique,Informatique,2,119,238
+CMD0155,2026-01-21,CLI001,Toulouse,Ampoule connectée,Objets connectés,1,25,25
+CMD0156,2026-01-20,CLI078,Lyon,Clavier mécanique,Informatique,2,119,238
+CMD0157,2026-02-27,CLI026,Paris,Écran 27 pouces,Informatique,4,249,996
+CMD0158,2026-07-18,CLI067,Lyon,Écran 27 pouces,Informatique,2,249,498
+CMD0159,2026-06-04,CLI118,Marseille,Casque audio,Audio,1,89,89
+CMD0160,2026-09-01,CLI135,Lyon,Webcam HD,Informatique,2,69,138
+CMD0161,2026-07-30,CLI079,Paris,Souris sans fil,Informatique,1,35,35
+CMD0162,2026-09-13,CLI108,Paris,Casque audio,Audio,2,89,178
+CMD0163,2026-08-06,CLI095,Lyon,Écran 27 pouces,Informatique,2,249,498
+CMD0164,2026-06-23,CLI108,Marseille,Ampoule connectée,Objets connectés,1,25,25
+CMD0165,2026-01-04,CLI075,Nantes,Montre connectée,Objets connectés,2,199,398
+CMD0166,2026-09-11,CLI052,Marseille,Enceinte Bluetooth,Audio,2,59,118
+CMD0167,2026-08-27,CLI057,Marseille,Souris sans fil,Informatique,2,35,70
+CMD0168,2026-09-11,CLI048,Lyon,Écran 27 pouces,Informatique,1,249,249
+CMD0169,2026-01-29,CLI038,Lille,Ampoule connectée,Objets connectés,4,25,100
+CMD0170,2026-01-13,CLI037,Lille,Casque audio,Audio,2,89,178
+CMD0171,2026-04-05,CLI101,Lille,Casque audio,Audio,1,89,89
+CMD0172,2026-02-10,CLI043,Marseille,Webcam HD,Informatique,1,69,69
+CMD0173,2026-09-26,CLI120,Paris,Souris sans fil,Informatique,2,35,70
+CMD0174,2026-07-11,CLI085,,Écran 27 pouces,Informatique,4,249,996
+CMD0175,2026-01-02,CLI021,Marseille,Clavier mécanique,Informatique,1,119,119
+CMD0176,2026-08-04,CLI032,Bordeaux,Enceinte Bluetooth,Audio,3,59,177
+CMD0177,2026-07-02,CLI080,Toulouse,Souris sans fil,Informatique,4,35,140
+CMD0178,2026-01-26,CLI122,Lyon,Montre connectée,Objets connectés,1,199,199
+CMD0179,2026-04-09,CLI083,Marseille,Webcam HD,Informatique,4,69,276
+CMD0180,2026-07-30,CLI064,Toulouse,Ampoule connectée,Objets connectés,1,25,25
+CMD0181,2026-07-12,CLI009,Lille,Montre connectée,Objets connectés,1,199,199
+CMD0182,2026-05-12,CLI050,Nantes,Enceinte Bluetooth,Audio,1,59,59
+CMD0183,2026-07-05,CLI070,Marseille,Enceinte Bluetooth,Audio,3,59,177
+CMD0184,2026-06-12,CLI071,Marseille,Casque audio,Audio,3,89,267
+CMD0185,2026-01-13,CLI060,Paris,Casque audio,Audio,1,89,89
+CMD0186,2026-07-17,CLI065,Lille,Ampoule connectée,Objets connectés,4,25,100
+CMD0187,2026-09-12,CLI047,Paris,Ampoule connectée,Objets connectés,2,25,50
+CMD0188,2026-05-01,CLI084,Toulouse,Écran 27 pouces,Informatique,2,249,498
+CMD0189,2026-07-05,CLI021,Bordeaux,Webcam HD,Informatique,4,69,276
+CMD0190,2026-03-23,CLI064,Lille,Souris sans fil,Informatique,4,35,140
+CMD0191,2026-09-04,CLI140,Marseille,Enceinte Bluetooth,Audio,1,59,59
+CMD0192,2026-02-23,CLI019,Marseille,Clavier mécanique,Informatique,4,119,476
+CMD0193,2026-02-19,CLI108,Lille,Enceinte Bluetooth,Audio,2,59,118
+CMD0194,2026-04-30,CLI035,Lille,Ampoule connectée,Objets connectés,2,25,50
+CMD0195,2026-03-04,CLI076,Marseille,Ampoule connectée,Objets connectés,2,25,50
+CMD0196,2026-07-10,CLI066,Nantes,Écran 27 pouces,Informatique,3,249,747
+CMD0197,2026-08-13,CLI064,Lyon,  Écran 27 pouces ,Informatique,2,249,498
+CMD0198,2026-03-20,CLI073,Bordeaux,Souris sans fil,Informatique,2,35,70
+CMD0199,2026-02-03,CLI102,Marseille,Souris sans fil,Informatique,3,35,105
+CMD0200,2026-02-21,CLI119,Paris,Souris sans fil,Informatique,2,35,70
+CMD0201,2026-09-01,CLI060,Toulouse,Enceinte Bluetooth,Audio,1,59,59
+CMD0202,2026-01-21,CLI076,Lyon,Ampoule connectée,Objets connectés,3,25,75
+CMD0203,2026-04-08,CLI050,Paris,Enceinte Bluetooth,Audio,1,59,59
+CMD0204,2026-08-18,CLI067,Toulouse,Webcam HD,Informatique,2,69,138
+CMD0205,2026-06-29,CLI056,Paris,Casque audio,Audio,1,89,89
+CMD0206,2026-03-14,CLI012,Lyon,Webcam HD,Informatique,3,69,207
+CMD0207,2026-04-15,CLI003,Toulouse,Écran 27 pouces,Informatique,1,249,249
+CMD0208,2026-07-10,CLI048,Bordeaux,Webcam HD,Informatique,4,69,276
+CMD0209,2026-04-15,CLI009,Toulouse,Écran 27 pouces,Informatique,1,249,249
+CMD0210,2026-02-02,CLI105,Paris,Ampoule connectée,Objets connectés,4,25,100
+CMD0211,2026-02-16,CLI042,Lille,Montre connectée,Objets connectés,2,199,398
+CMD0212,2026-05-26,CLI079,Lille,Écran 27 pouces,Informatique,4,249,996
+CMD0213,2026-07-02,CLI107,Lille,Casque audio,Audio,3,89,267
+CMD0214,2026-04-11,CLI101,Nantes,Casque audio,Audio,3,89,267
+CMD0215,2026-01-04,CLI112,Lyon,Montre connectée,Objets connectés,2,199,398
+CMD0216,2026-02-16,CLI104,Bordeaux,Montre connectée,Objets connectés,1,199,199
+CMD0217,2026-03-25,CLI034,Paris,Webcam HD,Informatique,4,69,276
+CMD0218,2026-07-23,CLI023,Bordeaux,Casque audio,Audio,2,89,178
+CMD0219,2026-03-16,CLI090,Marseille,Webcam HD,Informatique,2,69,138
+CMD0220,2026-02-04,CLI028,Lille,Clavier mécanique,Informatique,2,119,238
+CMD0221,2026-06-04,CLI033,Toulouse,Ampoule connectée,Objets connectés,2,25,50
+CMD0222,2026-06-11,CLI014,Bordeaux,Casque audio,Audio,4,89,356
+CMD0223,2026-03-24,CLI057,Bordeaux,Montre connectée,Objets connectés,1,199,199
+CMD0224,2026-08-31,CLI047,Bordeaux,Montre connectée,Objets connectés,2,199,398
+CMD0225,2026-07-24,CLI133,Lyon,Souris sans fil,Informatique,1,35,35
+CMD0226,2026-03-05,CLI039,Lyon,  Montre connectée ,Objets connectés,3,199,597
+CMD0227,2026-01-20,CLI083,Paris,Souris sans fil,Informatique,1,35,35
+CMD0228,2026-06-06,CLI108,Marseille,Montre connectée,Objets connectés,4,199,796
+CMD0229,2026-07-19,CLI095,Lille,Souris sans fil,Informatique,4,35,140
+CMD0230,2026-01-12,CLI001,Bordeaux,Ampoule connectée,Objets connectés,2,25,50
+CMD0231,2026-05-01,CLI115,Toulouse,Ampoule connectée,Objets connectés,4,25,100
+CMD0232,2026-08-31,CLI103,Paris,Ampoule connectée,Objets connectés,2,25,50
+CMD0233,2026-07-03,CLI111,Marseille,Enceinte Bluetooth,Audio,2,59,118
+CMD0234,2026-09-16,CLI131,Nantes,Enceinte Bluetooth,Audio,4,59,236
+CMD0235,2026-03-08,CLI022,Nantes,Casque audio,Audio,1,89,89
+CMD0236,2026-01-28,CLI130,Lille,Webcam HD,Informatique,1,69,69
+CMD0237,2026-02-03,CLI029,Lyon,Clavier mécanique,Informatique,1,119,119
+CMD0238,2026-05-28,CLI043,Nantes,Clavier mécanique,Informatique,4,119,476
+CMD0239,2026-06-29,CLI065,Lyon,Souris sans fil,Informatique,1,35,35
+CMD0240,2026-08-22,CLI037,Marseille,Webcam HD,Informatique,3,69,207
+CMD0241,2026-05-15,CLI130,Lyon,Ampoule connectée,Objets connectés,2,25,50
+CMD0242,2026-01-19,CLI051,Lyon,Webcam HD,Informatique,3,69,207
+CMD0243,2026-05-23,CLI084,Lille,Montre connectée,Objets connectés,2,199,398
+CMD0244,2026-02-28,CLI136,,Clavier mécanique,Informatique,3,119,357
+CMD0245,2026-09-24,CLI027,Marseille,  Webcam HD ,Informatique,4,69,276
+CMD0246,2026-05-16,CLI097,Marseille,Montre connectée,Objets connectés,3,199,597
+CMD0247,2026-06-19,CLI021,Lille,Clavier mécanique,Informatique,3,119,357
+CMD0248,2026-01-25,CLI076,Toulouse,Souris sans fil,Informatique,2,35,70
+CMD0249,2026-06-10,CLI001,Nantes,Écran 27 pouces,Informatique,3,249,747
+CMD0250,2026-03-18,CLI075,Bordeaux,Casque audio,Audio,2,89,178
+CMD0251,2026-09-20,CLI094,Paris,Montre connectée,Objets connectés,4,199,796
+CMD0252,2026-04-27,CLI012,Paris,Clavier mécanique,Informatique,4,119,476
+CMD0253,2026-07-01,CLI078,Paris,Casque audio,Audio,1,89,89
+CMD0254,2026-07-31,CLI078,Bordeaux,Webcam HD,Informatique,2,69,138
+CMD0255,2026-07-07,CLI122,Lyon,Clavier mécanique,Informatique,2,119,238
+CMD0256,2026-05-05,CLI039,Lille,Clavier mécanique,Informatique,1,119,119
+CMD0257,2026-03-16,CLI070,Lille,Enceinte Bluetooth,Audio,1,59,59
+CMD0258,2026-01-29,CLI090,Bordeaux,Écran 27 pouces,Informatique,1,249,249
+CMD0259,2026-05-08,CLI043,Paris,Ampoule connectée,Objets connectés,4,25,100
+CMD0260,2026-01-13,CLI104,Lyon,Casque audio,Audio,1,89,89
+CMD0261,2026-01-30,CLI027,Paris,Souris sans fil,Informatique,2,35,70
+CMD0262,2026-07-31,CLI052,Bordeaux,Souris sans fil,Informatique,2,35,70
+CMD0263,2026-09-18,CLI080,Paris,Montre connectée,Objets connectés,2,199,398
+CMD0264,2026-09-02,CLI138,Paris,Écran 27 pouces,Informatique,1,249,249
+CMD0265,2026-08-27,CLI021,Nantes,Montre connectée,Objets connectés,4,199,796
+CMD0266,2026-04-26,CLI027,Marseille,Ampoule connectée,Objets connectés,2,25,50
+CMD0267,2026-03-05,CLI086,Nantes,Souris sans fil,Informatique,1,35,35
+CMD0268,2026-05-17,CLI112,Nantes,Écran 27 pouces,Informatique,1,249,249
+CMD0269,2026-04-22,CLI022,Bordeaux,Écran 27 pouces,Informatique,3,249,747
+CMD0270,2026-05-14,CLI061,Toulouse,Casque audio,Audio,2,89,178
+CMD0271,2026-06-17,CLI050,Lille,Souris sans fil,Informatique,2,35,70
+CMD0272,2026-07-14,CLI138,Lille,Webcam HD,Informatique,2,69,138
+CMD0273,2026-01-14,CLI112,Nantes,Ampoule connectée,Objets connectés,1,25,25
+CMD0274,2026-04-19,CLI101,,Souris sans fil,Informatique,3,35,105
+CMD0275,2026-03-16,CLI009,Paris,Enceinte Bluetooth,Audio,2,59,118
+CMD0276,2026-03-24,CLI089,Lyon,Enceinte Bluetooth,Audio,1,59,59
+CMD0277,2026-01-22,CLI036,Nantes,Casque audio,Audio,1,89,89
+CMD0278,2026-01-24,CLI017,Toulouse,Casque audio,Audio,1,89,89
+CMD0279,2026-02-03,CLI099,Paris,Webcam HD,Informatique,2,69,138
+CMD0280,2026-04-15,CLI029,Paris,Souris sans fil,Informatique,2,35,70
+CMD0281,2026-05-28,CLI123,Paris,Casque audio,Audio,1,89,89
+CMD0282,2026-04-15,CLI076,Marseille,Clavier mécanique,Informatique,1,119,119
+CMD0283,2026-05-14,CLI006,,Webcam HD,Informatique,4,69,276
+CMD0284,2026-01-25,CLI095,Marseille,Écran 27 pouces,Informatique,3,249,747
+CMD0285,2026-01-16,CLI106,Paris,Ampoule connectée,Objets connectés,3,25,75
+CMD0286,2026-06-27,CLI121,Nantes,Montre connectée,Objets connectés,1,199,199
+CMD0287,2026-02-16,CLI074,Lyon,Casque audio,Audio,2,89,178
+CMD0288,2026-09-26,CLI052,Marseille,Montre connectée,Objets connectés,1,199,199
+CMD0289,2026-06-28,CLI126,Paris,Casque audio,Audio,1,89,89
+CMD0290,2026-09-11,CLI089,Toulouse,Ampoule connectée,Objets connectés,2,25,50
+CMD0291,2026-05-26,CLI055,Nantes,Écran 27 pouces,Informatique,2,249,498
+CMD0292,2026-03-26,CLI029,Nantes,Souris sans fil,Informatique,4,35,140
+CMD0293,2026-02-23,CLI084,Marseille,Enceinte Bluetooth,Audio,4,59,236
+CMD0294,2026-07-22,CLI023,Lille,Enceinte Bluetooth,Audio,4,59,236
+CMD0295,2026-04-16,CLI078,Marseille,Casque audio,Audio,3,89,267
+CMD0296,2026-07-14,CLI060,Lille,Montre connectée,Objets connectés,2,199,398
+CMD0297,2026-06-28,CLI084,Bordeaux,Clavier mécanique,Informatique,1,119,119
+CMD0298,2026-06-15,CLI044,Lille,Clavier mécanique,Informatique,4,119,476
+CMD0299,2026-04-29,CLI033,Marseille,Ampoule connectée,Objets connectés,3,25,75
+CMD0300,2026-09-17,CLI050,Marseille,Ampoule connectée,Objets connectés,2,25,50
+CMD0301,2026-03-21,CLI064,Nantes,Écran 27 pouces,Informatique,2,249,498
+CMD0302,2026-03-24,CLI061,Marseille,Webcam HD,Informatique,3,69,207
+CMD0303,2026-02-22,CLI043,Nantes,Souris sans fil,Informatique,3,35,105
+CMD0304,2026-07-16,CLI039,Lyon,Enceinte Bluetooth,Audio,2,59,118
+CMD0305,2026-08-11,CLI071,Lyon,Écran 27 pouces,Informatique,3,249,747
+CMD0306,2026-05-24,CLI053,Lille,Enceinte Bluetooth,Audio,1,59,59
+CMD0307,2026-01-07,CLI103,Toulouse,Ampoule connectée,Objets connectés,1,25,25
+CMD0308,2026-09-14,CLI076,Lille,Montre connectée,Objets connectés,2,199,398
+CMD0309,2026-05-12,CLI104,Paris,Casque audio,Audio,2,89,178
+CMD0310,2026-08-04,CLI059,Nantes,Souris sans fil,Informatique,4,35,140
+CMD0311,2026-03-05,CLI117,Lille,Souris sans fil,Informatique,2,35,70
+CMD0312,2026-02-20,CLI108,Lyon,Webcam HD,Informatique,3,69,207
+CMD0313,2026-05-09,CLI109,Lille,Montre connectée,Objets connectés,2,199,398
+CMD0314,2026-07-29,CLI133,Nantes,Ampoule connectée,Objets connectés,1,25,25
+CMD0315,2026-01-06,CLI100,Toulouse,Clavier mécanique,Informatique,3,119,357
+CMD0316,2026-01-20,CLI065,Bordeaux,Ampoule connectée,Objets connectés,1,25,25
+CMD0317,2026-04-13,CLI133,Marseille,Souris sans fil,Informatique,2,35,70
+CMD0318,2026-04-15,CLI122,Bordeaux,Enceinte Bluetooth,Audio,4,59,236
+CMD0319,2026-09-25,CLI088,Lille,Casque audio,Audio,3,89,267
+CMD0320,2026-04-05,CLI101,Bordeaux,Ampoule connectée,Objets connectés,2,25,50
+CMD0321,2026-01-29,CLI065,Marseille,Enceinte Bluetooth,Audio,3,59,177
+CMD0322,2026-02-01,CLI004,Paris,Montre connectée,Objets connectés,4,199,796
+CMD0323,2026-06-30,CLI068,Paris,Montre connectée,Objets connectés,4,199,796
+CMD0324,2026-07-25,CLI135,Lyon,Souris sans fil,Informatique,3,35,105
+CMD0325,2026-04-19,CLI043,Lyon,Montre connectée,Objets connectés,4,199,796
+CMD0326,2026-08-29,CLI058,Toulouse,Enceinte Bluetooth,Audio,2,59,118
+CMD0327,2026-07-31,CLI120,Marseille,Clavier mécanique,Informatique,3,119,357
+CMD0328,2026-07-01,CLI059,Marseille,Clavier mécanique,Informatique,4,119,476
+CMD0329,2026-08-07,CLI048,Lille,Montre connectée,Objets connectés,3,199,597
+CMD0330,2026-07-03,CLI063,Nantes,Casque audio,Audio,3,89,267
+CMD0331,2026-09-03,CLI125,,Écran 27 pouces,Informatique,3,249,747
+CMD0332,2026-03-20,CLI078,Toulouse,Enceinte Bluetooth,Audio,3,59,177
+CMD0333,2026-02-13,CLI084,Toulouse,Montre connectée,Objets connectés,1,199,199
+CMD0334,2026-01-08,CLI003,Lyon,Clavier mécanique,Informatique,3,119,357
+CMD0335,2026-05-09,CLI026,Bordeaux,Enceinte Bluetooth,Audio,3,59,177
+CMD0336,2026-04-06,CLI116,Marseille,Clavier mécanique,Informatique,2,119,238
+CMD0337,2026-07-26,CLI137,Lyon,Clavier mécanique,Informatique,2,119,238
+CMD0338,2026-04-12,CLI127,Nantes,Enceinte Bluetooth,Audio,3,59,177
+CMD0339,2026-08-13,CLI030,Bordeaux,Souris sans fil,Informatique,1,35,35
+CMD0340,2026-08-03,CLI060,Toulouse,Enceinte Bluetooth,Audio,3,59,177
+CMD0341,2026-09-10,CLI015,Lille,Clavier mécanique,Informatique,4,119,476
+CMD0342,2026-09-09,CLI064,Lille,Ampoule connectée,Objets connectés,2,25,50
+CMD0343,2026-03-24,CLI083,Lille,Clavier mécanique,Informatique,1,119,119
+CMD0344,2026-08-27,CLI096,Lille,Ampoule connectée,Objets connectés,3,25,75
+CMD0345,2026-04-03,CLI093,Nantes,Montre connectée,Objets connectés,1,199,199
+CMD0346,2026-01-24,CLI085,Toulouse,Casque audio,Audio,1,89,89
+CMD0347,2026-09-06,CLI037,Paris,Enceinte Bluetooth,Audio,4,59,236
+CMD0348,2026-03-06,CLI087,Paris,Souris sans fil,Informatique,4,35,140
+CMD0349,2026-08-31,CLI135,Bordeaux,Webcam HD,Informatique,3,69,207
+CMD0350,2026-08-11,CLI088,Lille,Souris sans fil,Informatique,3,35,105
+CMD0351,2026-05-29,CLI075,Marseille,Écran 27 pouces,Informatique,1,249,249
+CMD0352,2026-06-20,CLI129,Marseille,Ampoule connectée,Objets connectés,4,25,100
+CMD0353,2026-09-10,CLI031,Marseille,Webcam HD,Informatique,2,69,138
+CMD0354,2026-06-03,CLI033,Bordeaux,Souris sans fil,Informatique,3,35,105
+CMD0355,2026-07-24,CLI104,Bordeaux,Enceinte Bluetooth,Audio,1,59,59
+CMD0356,2026-06-03,CLI028,Paris,Casque audio,Audio,4,89,356
+CMD0357,2026-09-01,CLI016,Toulouse,Casque audio,Audio,2,89,178
+CMD0358,2026-02-12,CLI055,,Montre connectée,Objets connectés,2,199,398
+CMD0359,2026-02-21,CLI047,Toulouse,Ampoule connectée,Objets connectés,2,25,50
+CMD0360,2026-02-21,CLI004,Marseille,Casque audio,Audio,4,89,356
+CMD0361,2026-05-13,CLI078,Lyon,Clavier mécanique,Informatique,3,119,357
+CMD0362,2026-06-13,CLI006,Lille,Montre connectée,Objets connectés,1,199,199
+CMD0363,2026-09-25,CLI011,,Casque audio,Audio,4,89,356
+CMD0364,2026-07-27,CLI115,Paris,Enceinte Bluetooth,Audio,4,59,236
+CMD0365,2026-03-21,CLI122,Toulouse,Casque audio,Audio,4,89,356
+CMD0366,2026-02-12,CLI121,Lyon,Montre connectée,Objets connectés,1,199,199
+CMD0367,2026-08-07,CLI002,Paris,Clavier mécanique,Informatique,1,119,119
+CMD0368,2026-04-22,CLI032,Lyon,Enceinte Bluetooth,Audio,1,59,59
+CMD0369,2026-05-22,CLI063,Lille,Ampoule connectée,Objets connectés,1,25,25
+CMD0370,2026-07-07,CLI038,Nantes,Clavier mécanique,Informatique,1,119,119
+CMD0371,2026-09-13,CLI118,Nantes,Enceinte Bluetooth,Audio,3,59,177
+CMD0372,2026-01-17,CLI003,Paris,Écran 27 pouces,Informatique,1,249,249
+CMD0373,2026-07-19,CLI080,Marseille,Casque audio,Audio,1,89,89
+CMD0374,2026-01-31,CLI081,Marseille,Clavier mécanique,Informatique,4,119,476
+CMD0375,2026-03-27,CLI038,Toulouse,Ampoule connectée,Objets connectés,4,25,100
+CMD0376,2026-03-25,CLI107,Lille,Enceinte Bluetooth,Audio,3,59,177
+CMD0377,2026-05-20,CLI086,Marseille,Montre connectée,Objets connectés,4,199,796
+CMD0378,2026-06-20,CLI004,Toulouse,Écran 27 pouces,Informatique,1,249,249
+CMD0379,2026-08-08,CLI064,Lille,Clavier mécanique,Informatique,3,119,357
+CMD0380,2026-04-30,CLI116,Marseille,Montre connectée,Objets connectés,4,199,796
+CMD0381,2026-05-15,CLI069,Lille,Casque audio,Audio,3,89,267
+CMD0382,2026-05-28,CLI037,Toulouse,Clavier mécanique,Informatique,1,119,119
+CMD0383,2026-09-13,CLI089,Bordeaux,Clavier mécanique,Informatique,3,119,357
+CMD0384,2026-07-15,CLI052,Toulouse,Enceinte Bluetooth,Audio,4,59,236
+CMD0385,2026-01-30,CLI102,Lille,Souris sans fil,Informatique,3,35,105
+CMD0386,2026-01-05,CLI099,Lille,Souris sans fil,Informatique,3,35,105
+CMD0387,2026-02-02,CLI060,Lille,Enceinte Bluetooth,Audio,3,59,177
+CMD0388,2026-09-02,CLI130,Bordeaux,Écran 27 pouces,Informatique,3,249,747
+CMD0389,2026-04-19,CLI050,Paris,Souris sans fil,Informatique,2,35,70
+CMD0390,2026-07-05,CLI092,Lille,Clavier mécanique,Informatique,3,119,357
+CMD0391,2026-01-23,CLI127,Marseille,Clavier mécanique,Informatique,2,119,238
+CMD0392,2026-08-26,CLI021,Lyon,Enceinte Bluetooth,Audio,3,59,177
+CMD0393,2026-06-26,CLI072,Bordeaux,Webcam HD,Informatique,1,69,69
+CMD0394,2026-01-18,CLI053,Toulouse,Casque audio,Audio,1,89,89
+CMD0395,2026-05-14,CLI072,Lille,  Ampoule connectée ,Objets connectés,2,25,50
+CMD0396,2026-03-09,CLI066,Toulouse,Enceinte Bluetooth,Audio,4,59,236
+CMD0397,2026-04-13,CLI047,Lille,Casque audio,Audio,3,89,267
+CMD0398,2026-01-27,CLI009,Bordeaux,Enceinte Bluetooth,Audio,1,59,59
+CMD0399,2026-09-07,CLI017,Toulouse,Webcam HD,Informatique,4,69,276
+CMD0400,2026-02-16,CLI066,Marseille,Montre connectée,Objets connectés,1,199,199
+CMD0401,2026-09-17,CLI101,Lyon,Souris sans fil,Informatique,1,35,35
+CMD0402,2026-07-09,CLI061,Nantes,Ampoule connectée,Objets connectés,2,25,50
+CMD0403,2026-01-20,CLI066,Marseille,Souris sans fil,Informatique,2,35,70
+CMD0404,2026-01-25,CLI067,Toulouse,Casque audio,Audio,1,89,89
+CMD0405,2026-02-21,CLI038,Marseille,Ampoule connectée,Objets connectés,1,25,25
+CMD0406,2026-06-02,CLI113,Toulouse,  Casque audio ,Audio,2,89,178
+CMD0407,2026-06-15,CLI096,Marseille,Enceinte Bluetooth,Audio,4,59,236
+CMD0408,2026-07-11,CLI124,Lille,Montre connectée,Objets connectés,1,199,199
+CMD0409,2026-05-03,CLI037,Nantes,Clavier mécanique,Informatique,4,119,476
+CMD0410,2026-04-10,CLI010,Lyon,Casque audio,Audio,4,89,356
+CMD0411,2026-07-11,CLI036,Toulouse,Souris sans fil,Informatique,1,35,35
+CMD0412,2026-07-17,CLI006,Nantes,Ampoule connectée,Objets connectés,1,25,25
+CMD0413,2026-06-23,CLI083,Toulouse,Enceinte Bluetooth,Audio,4,59,236
+CMD0414,2026-03-01,CLI094,Lyon,Souris sans fil,Informatique,4,35,140
+CMD0415,2026-01-30,CLI047,Nantes,Webcam HD,Informatique,2,69,138
+CMD0416,2026-08-13,CLI039,Marseille,Ampoule connectée,Objets connectés,2,25,50
+CMD0417,2026-05-07,CLI040,Paris,Montre connectée,Objets connectés,4,199,796
+CMD0418,2026-06-21,CLI043,Marseille,Écran 27 pouces,Informatique,3,249,747
+CMD0419,2026-06-12,CLI117,Lille,Ampoule connectée,Objets connectés,1,25,25
+CMD0420,2026-09-20,CLI015,Nantes,Enceinte Bluetooth,Audio,2,59,118
+CMD0421,2026-05-27,CLI031,Marseille,Souris sans fil,Informatique,4,35,140
+CMD0422,2026-08-10,CLI067,Lyon,Souris sans fil,Informatique,3,35,105
+CMD0423,2026-07-19,CLI075,Lille,Souris sans fil,Informatique,1,35,35
+CMD0424,2026-05-31,CLI037,Nantes,Clavier mécanique,Informatique,1,119,119
+CMD0425,2026-09-17,CLI088,Bordeaux,Casque audio,Audio,4,89,356
+CMD0426,2026-01-01,CLI135,Marseille,Clavier mécanique,Informatique,4,119,476
+CMD0427,2026-08-11,CLI011,Lille,Clavier mécanique,Informatique,3,119,357
+CMD0428,2026-04-03,CLI036,Toulouse,Souris sans fil,Informatique,3,35,105
+CMD0429,2026-03-31,CLI051,Bordeaux,Clavier mécanique,Informatique,2,119,238
+CMD0430,2026-09-11,CLI071,Lyon,Enceinte Bluetooth,Audio,1,59,59
+CMD0431,2026-04-09,CLI079,Lyon,Souris sans fil,Informatique,2,35,70
+CMD0432,2026-09-24,CLI105,Toulouse,Casque audio,Audio,1,89,89
+CMD0433,2026-06-21,CLI073,Toulouse,Casque audio,Audio,3,89,267
+CMD0434,2026-01-08,CLI105,Toulouse,Ampoule connectée,Objets connectés,1,25,25
+CMD0435,2026-05-17,CLI064,Lyon,Ampoule connectée,Objets connectés,2,25,50
+CMD0436,2026-03-25,CLI096,Bordeaux,Webcam HD,Informatique,1,69,69
+CMD0437,2026-09-24,CLI115,Bordeaux,Casque audio,Audio,3,89,267
+CMD0438,2026-07-02,CLI063,Toulouse,Enceinte Bluetooth,Audio,1,59,59
+CMD0439,2026-02-01,CLI075,Toulouse,Webcam HD,Informatique,4,69,276
+CMD0440,2026-08-17,CLI132,Paris,Enceinte Bluetooth,Audio,4,59,236
+CMD0441,2026-05-05,CLI023,,Clavier mécanique,Informatique,1,119,119
+CMD0442,2026-02-22,CLI080,Marseille,Clavier mécanique,Informatique,2,119,238
+CMD0443,2026-02-19,CLI050,Marseille,Casque audio,Audio,1,89,89
+CMD0444,2026-09-25,CLI062,Nantes,Casque audio,Audio,4,89,356
+CMD0445,2026-06-29,CLI025,Nantes,Ampoule connectée,Objets connectés,1,25,25
+CMD0446,2026-05-20,CLI032,Lille,Clavier mécanique,Informatique,1,119,119
+CMD0447,2026-02-26,CLI032,Paris,Ampoule connectée,Objets connectés,3,25,75
+CMD0448,2026-04-27,CLI059,Lyon,Montre connectée,Objets connectés,2,199,398
+CMD0449,2026-03-26,CLI005,Nantes,Ampoule connectée,Objets connectés,4,25,100
+CMD0450,2026-09-27,CLI010,Lille,Montre connectée,Objets connectés,4,199,796
+CMD0451,2026-06-23,CLI103,Lyon,  Casque audio ,Audio,3,89,267
+CMD0452,2026-06-14,CLI103,Toulouse,Webcam HD,Informatique,4,69,276
+CMD0453,2026-09-22,CLI038,Nantes,Casque audio,Audio,3,89,267
+CMD0454,2026-08-05,CLI003,Marseille,Webcam HD,Informatique,2,69,138
+CMD0455,2026-02-05,CLI084,Lille,Enceinte Bluetooth,Audio,2,59,118
+CMD0456,2026-04-26,CLI036,Lille,Souris sans fil,Informatique,1,35,35
+CMD0457,2026-01-24,CLI011,Paris,Montre connectée,Objets connectés,4,199,796
+CMD0458,2026-01-19,CLI026,Marseille,Écran 27 pouces,Informatique,3,249,747
+CMD0459,2026-08-11,CLI061,Paris,Enceinte Bluetooth,Audio,1,59,59
+CMD0460,2026-06-06,CLI089,Nantes,Écran 27 pouces,Informatique,1,249,249
+CMD0461,2026-01-31,CLI132,Marseille,  Clavier mécanique ,Informatique,1,119,119
+CMD0462,2026-03-17,CLI113,Paris,Enceinte Bluetooth,Audio,4,59,236
+CMD0463,2026-07-28,CLI074,Marseille,Clavier mécanique,Informatique,3,119,357
+CMD0464,2026-05-28,CLI117,Bordeaux,Souris sans fil,Informatique,1,35,35
+CMD0465,2026-04-14,CLI094,Lille,Souris sans fil,Informatique,4,35,140
+CMD0466,2026-08-29,CLI080,Paris,Écran 27 pouces,Informatique,4,249,996
+CMD0467,2026-04-24,CLI049,Bordeaux,Souris sans fil,Informatique,3,35,105
+CMD0468,2026-01-07,CLI091,Lyon,Montre connectée,Objets connectés,4,199,796
+CMD0469,2026-06-16,CLI126,Marseille,Souris sans fil,Informatique,3,35,105
+CMD0470,2026-06-01,CLI015,Toulouse,Écran 27 pouces,Informatique,2,249,498
+CMD0471,2026-02-04,CLI090,Lille,Casque audio,Audio,2,89,178
+CMD0472,2026-08-14,CLI091,Nantes,Casque audio,Audio,4,89,356
+CMD0473,2026-03-21,CLI107,Marseille,Enceinte Bluetooth,Audio,2,59,118
+CMD0474,2026-04-14,CLI071,Toulouse,Webcam HD,Informatique,2,69,138
+CMD0475,2026-05-18,CLI033,Lille,Enceinte Bluetooth,Audio,4,59,236
+CMD0476,2026-07-30,CLI031,Lille,Enceinte Bluetooth,Audio,1,59,59
+CMD0477,2026-08-02,CLI072,Toulouse,Montre connectée,Objets connectés,2,199,398
+CMD0478,2026-08-20,CLI118,Marseille,Enceinte Bluetooth,Audio,4,59,236
+CMD0479,2026-06-30,CLI101,,Webcam HD,Informatique,3,69,207
+CMD0480,2026-01-04,CLI128,Lille,Montre connectée,Objets connectés,3,199,597
+CMD0481,2026-04-05,CLI138,Marseille,Ampoule connectée,Objets connectés,3,25,75
+CMD0482,2026-07-13,CLI060,Paris,Clavier mécanique,Informatique,4,119,476
+CMD0483,2026-05-05,CLI084,Lyon,Webcam HD,Informatique,3,69,207
+CMD0484,2026-01-14,CLI013,Marseille,Montre connectée,Objets connectés,1,199,199
+CMD0485,2026-06-09,CLI138,Bordeaux,Ampoule connectée,Objets connectés,3,25,75
+CMD0486,2026-07-19,CLI119,Marseille,Montre connectée,Objets connectés,4,199,796
+CMD0487,2026-08-20,CLI003,Nantes,Casque audio,Audio,3,89,267
+CMD0488,2026-02-20,CLI105,Marseille,Enceinte Bluetooth,Audio,2,59,118
+CMD0489,2026-04-07,CLI108,Lille,Montre connectée,Objets connectés,2,199,398
+CMD0490,2026-06-25,CLI136,Nantes,Montre connectée,Objets connectés,4,199,796
+CMD0491,2026-07-05,CLI082,Marseille,Enceinte Bluetooth,Audio,2,59,118
+CMD0492,2026-09-20,CLI045,Paris,Enceinte Bluetooth,Audio,3,59,177
+CMD0493,2026-09-18,CLI108,Nantes,Écran 27 pouces,Informatique,3,249,747
+CMD0494,2026-09-19,CLI054,Bordeaux,Clavier mécanique,Informatique,3,119,357
+CMD0495,2026-04-04,CLI016,Nantes,Souris sans fil,Informatique,4,35,140
+CMD0496,2026-01-22,CLI106,Paris,Enceinte Bluetooth,Audio,3,59,177
+CMD0497,2026-01-03,CLI078,Lille,Casque audio,Audio,3,89,267
+CMD0498,2026-01-16,CLI051,Lyon,Enceinte Bluetooth,Audio,1,59,59
+CMD0499,2026-09-21,CLI037,Bordeaux,Ampoule connectée,Objets connectés,3,25,75
+CMD0500,2026-03-04,CLI038,Lyon,Souris sans fil,Informatique,4,35,140
+CMD0266,2026-04-26,CLI027,Marseille,Ampoule connectée,Objets connectés,2,25,50
+CMD0389,2026-04-19,CLI050,Paris,Souris sans fil,Informatique,2,35,70
+CMD0261,2026-01-30,CLI027,Paris,Souris sans fil,Informatique,2,35,70
+CMD0055,2026-05-30,CLI129,Lyon,Écran 27 pouces,Informatique,2,249,498
+CMD0015,2026-06-24,CLI090,Bordeaux,Enceinte Bluetooth,Audio,3,59,177
+CMD0052,2026-08-31,CLI090,Lyon,Ampoule connectée,Objets connectés,2,25,50
+CMD0039,2026-05-14,CLI133,Marseille,Écran 27 pouces,Informatique,1,249,249
+CMD0088,2026-06-27,CLI005,Marseille,Clavier mécanique,Informatique,3,119,357
+CMD0486,2026-07-19,CLI119,Marseille,Montre connectée,Objets connectés,4,199,796
+CMD0268,2026-05-17,CLI112,Nantes,Écran 27 pouces,Informatique,1,249,249
+CMD0252,2026-04-27,CLI012,Paris,Clavier mécanique,Informatique,4,119,476
+CMD0422,2026-08-10,CLI067,Lyon,Souris sans fil,Informatique,3,35,105

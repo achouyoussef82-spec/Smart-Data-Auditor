@@ -1,7 +1,4 @@
-streamlit
-polars
-langchain
-langchain-experimental
-langchain-openai
-pandas
-tabulate
+streamlit>=1.40
+polars>=1.0
+pyarrow
+anthropic>=1.13

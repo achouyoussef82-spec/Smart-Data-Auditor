@@ -1,99 +1,268 @@
-import streamlit as st
+import os
+
+import anthropic
 import polars as pl
+import streamlit as st
+from anthropic import beta_tool
 
-# Configuration de la page
-st.set_page_config(page_title="Smart Data Auditor", layout="wide")
+st.set_page_config(page_title="Smart Data Auditor", page_icon="🛡️", layout="wide")
 
-# --- 1. CHARGEMENT DES DONNÉES ---
-uploaded_file = st.file_uploader("Étape 1 : Dépose ton fichier CSV", type="csv")
+MODEL = "claude-opus-5-5"
+MAX_RESULT_ROWS = 100
 
-if uploaded_file:
-    try:
-        # Tentative 1 : UTF-8
-        df = pl.read_csv(uploaded_file, infer_schema_length=10000, ignore_errors=True)
-    except Exception:
-        # Tentative 2 : Latin-1 si l'UTF-8 échoue
-        uploaded_file.seek(0)
+
+# --- ÉTAT DE LA SESSION ---
+# Streamlit relance le script à chaque clic : on garde le tableau nettoyé
+# et l'historique du chat dans st.session_state.
+def init_state():
+    defaults = {"df": None, "file_id": None, "log": [], "chat": []}
+    for key, value in defaults.items():
+        st.session_state.setdefault(key, value)
+
+
+def read_csv(uploaded_file) -> pl.DataFrame:
+    for encoding in ("utf8", "iso-8859-1"):
         try:
-            df = pl.read_csv(uploaded_file, encoding="iso-8859-1", infer_schema_length=10000, ignore_errors=True)
-        except Exception as e:
-            st.error(f"Erreur critique de lecture : {e}")
-            st.stop()
+            uploaded_file.seek(0)
+            return pl.read_csv(
+                uploaded_file,
+                encoding=encoding,
+                infer_schema_length=10000,
+                ignore_errors=True,
+                try_parse_dates=True,
+            )
+        except Exception:
+            continue
+    raise ValueError("Impossible de lire le fichier (encodage ou séparateur non reconnu).")
 
-    # La suite du code (st.write, etc.) doit être alignée ici, à l'intérieur du "if"
-    st.write("### 📊 Aperçu des données brutes")
-    st.dataframe(df.head(10))
-        
-    # Affichage du tableau
-    st.write("### 📊 Aperçu des données brutes")
-    st.dataframe(df.head(10))
 
-    # --- 2. AUDIT & STATS ---
-    st.sidebar.header("🛠️ Outils d'Audit")
-    
-    # Calcul des doublons
+def get_api_key() -> str | None:
+    try:
+        if "ANTHROPIC_API_KEY" in st.secrets:
+            return st.secrets["ANTHROPIC_API_KEY"]
+    except Exception:
+        pass
+    return os.environ.get("ANTHROPIC_API_KEY") or st.session_state.get("api_key_input") or None
+
+
+def apply_cleaning(new_df: pl.DataFrame, message: str):
+    st.session_state.df = new_df
+    st.session_state.log.append(message)
+    st.rerun()
+
+
+init_state()
+
+st.title("🛡️ Smart Data Auditor")
+st.caption("Auditez, nettoyez et interrogez vos données en langage naturel.")
+
+# --- 1. CHARGEMENT ---
+uploaded_file = st.file_uploader("Déposez votre fichier CSV", type="csv")
+
+if uploaded_file is None:
+    st.info("👋 Pour commencer, importez un fichier CSV.")
+    st.stop()
+
+if st.session_state.file_id != uploaded_file.file_id:
+    try:
+        st.session_state.df = read_csv(uploaded_file)
+    except ValueError as e:
+        st.error(str(e))
+        st.stop()
+    st.session_state.file_id = uploaded_file.file_id
+    st.session_state.log = []
+    st.session_state.chat = []
+
+df: pl.DataFrame = st.session_state.df
+
+tab_audit, tab_clean, tab_viz, tab_ai = st.tabs(
+    ["📋 Audit", "🧹 Nettoyage", "📈 Visualisation", "🤖 Questions à l'IA"]
+)
+
+# --- 2. AUDIT ---
+with tab_audit:
     num_duplicates = df.height - df.unique().height
-    
-    st.sidebar.metric("Lignes totales", df.height)
-    st.sidebar.metric("Doublons détectés", num_duplicates)
+    total_nulls = sum(df.null_count().row(0))
 
-    # --- 3. LOGIQUE DE NETTOYAGE (Ton expertise) ---
-    st.write("### 🧹 Actions de Nettoyage")
-    
-    col_btn1, col_btn2 = st.columns(2)
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Lignes", f"{df.height:,}".replace(",", " "))
+    c2.metric("Colonnes", df.width)
+    c3.metric("Doublons", num_duplicates)
+    c4.metric("Valeurs manquantes", total_nulls)
 
-    with col_btn1:
-        if st.button("Supprimer les doublons"):
-            df = df.unique()
-            st.success("✅ Doublons supprimés !")
+    st.subheader("Qualité par colonne")
+    quality = pl.DataFrame(
+        {
+            "colonne": df.columns,
+            "type": [str(t) for t in df.dtypes],
+            "valeurs manquantes": [df[c].null_count() for c in df.columns],
+            "% manquant": [
+                round(100 * df[c].null_count() / df.height, 1) if df.height else 0.0
+                for c in df.columns
+            ],
+            "valeurs uniques": [df[c].n_unique() for c in df.columns],
+        }
+    )
+    st.dataframe(quality, width="stretch", hide_index=True)
 
-    with col_btn2:
-        if st.button("Nettoyer les colonnes (Minuscules/Espaces)"):
-            # Exemple de Python pur appliqué à Polars : on nettoie les noms de colonnes
-            new_columns = [col.strip().lower() for col in df.columns]
-            df.columns = new_columns
-            st.success("✅ Colonnes formatées !")
+    st.subheader("Aperçu")
+    st.dataframe(df.head(20), width="stretch")
 
-    # Affichage du résultat après nettoyage
-    st.write("### ✨ Données nettoyées")
-    st.dataframe(df)
+# --- 3. NETTOYAGE ---
+with tab_clean:
+    st.write("Chaque action s'applique au tableau actuel et reste mémorisée.")
 
-    # --- 4. EXPORT ---
-    # Permettre au client de télécharger son fichier propre
-    csv_data = df.write_csv()
+    col1, col2, col3, col4 = st.columns(4)
+
+    if col1.button("Supprimer les doublons", width="stretch"):
+        before = df.height
+        df = df.unique(maintain_order=True)
+        apply_cleaning(df, f"Doublons supprimés : {before - df.height} lignes")
+
+    if col2.button("Normaliser les noms de colonnes", width="stretch"):
+        df = df.rename({c: c.strip().lower().replace(" ", "_") for c in df.columns})
+        apply_cleaning(df, "Noms de colonnes normalisés (minuscules, sans espaces)")
+
+    if col3.button("Retirer les espaces en trop", width="stretch"):
+        text_cols = [c for c, t in zip(df.columns, df.dtypes) if t == pl.String]
+        df = df.with_columns(pl.col(text_cols).str.strip_chars())
+        apply_cleaning(df, f"Espaces retirés dans {len(text_cols)} colonnes texte")
+
+    if col4.button("Supprimer les lignes vides", width="stretch"):
+        before = df.height
+        df = df.filter(~pl.all_horizontal(pl.all().is_null()))
+        apply_cleaning(df, f"Lignes entièrement vides supprimées : {before - df.height}")
+
+    if st.session_state.log:
+        st.success("\n".join(f"✅ {line}" for line in st.session_state.log))
+
+    st.dataframe(df.head(50), width="stretch")
+
     st.download_button(
-        label="📥 Télécharger le fichier propre",
-        data=csv_data,
-        file_name="data_clean_2026.csv",
-        mime="text/csv"
+        label="📥 Télécharger le fichier nettoyé",
+        data=df.write_csv(),
+        file_name=f"{os.path.splitext(uploaded_file.name)[0]}_clean.csv",
+        mime="text/csv",
     )
 
-else:
-    st.info("👋 Bonjour ! Pour commencer, importe un fichier CSV dans le module ci-dessus.")
+# --- 4. VISUALISATION ---
+with tab_viz:
+    numeric_cols = [c for c, t in zip(df.columns, df.dtypes) if t.is_numeric()]
+    category_cols = [c for c, t in zip(df.columns, df.dtypes) if t == pl.String]
 
+    if not numeric_cols:
+        st.info("Aucune colonne numérique à afficher.")
+    else:
+        v1, v2, v3 = st.columns(3)
+        value_col = v1.selectbox("Valeur", numeric_cols)
+        group_col = v2.selectbox("Regrouper par", ["(aucun)"] + category_cols)
+        agg = v3.selectbox("Calcul", ["somme", "moyenne", "nombre"])
 
-
-
-from langchain_experimental.agents import create_csv_agent
-from langchain_openai import ChatOpenAI
+        if group_col == "(aucun)":
+            st.bar_chart(df[value_col].drop_nulls().to_frame(), y=value_col)
+        else:
+            agg_expr = {
+                "somme": pl.col(value_col).sum(),
+                "moyenne": pl.col(value_col).mean(),
+                "nombre": pl.col(value_col).count(),
+            }[agg]
+            chart_df = (
+                df.group_by(group_col)
+                .agg(agg_expr.alias(agg))
+                .sort(agg, descending=True)
+                .head(20)
+            )
+            st.bar_chart(chart_df, x=group_col, y=agg)
 
 # --- 5. MODULE IA ---
-st.write("### 🤖 Interroger les données avec l'IA")
+with tab_ai:
+    api_key = get_api_key()
+    if not api_key:
+        st.text_input(
+            "Clé API Anthropic",
+            type="password",
+            key="api_key_input",
+            help="Créez une clé sur console.anthropic.com. Elle n'est pas enregistrée.",
+        )
+        st.info("Ajoutez une clé API Anthropic pour poser des questions sur vos données.")
+        st.stop()
 
-api_key = st.text_input("Entre ta clé API OpenAI pour discuter avec les données", type="password")
+    @beta_tool
+    def run_sql(query: str) -> str:
+        """Exécute une requête SQL en lecture seule sur le tableau `data` et renvoie le résultat.
 
-if api_key:
-    user_question = st.text_input("Pose une question (ex: 'Quel est l'âge moyen ?' ou 'Affiche les lignes de Lyon')")
-    
-    if user_question:
-        # Initialisation de l'IA
-        llm = ChatOpenAI(api_key=api_key, model="gpt-4o", temperature=0)
-        
-        # Création de l'agent qui lit le CSV
-        # Note: On repasse par le fichier temporaire pour l'agent
-        agent = create_csv_agent(llm, uploaded_file, verbose=True, allow_dangerous_code=True)
-        
-        with st.spinner("L'IA réfléchit..."):
-            response = agent.run(user_question)
-            st.success("Réponse de l'IA :")
-            st.write(response)
+        Args:
+            query: Requête SQL (dialecte Polars SQL) portant sur la table `data`.
+        """
+        try:
+            result = pl.SQLContext(data=st.session_state.df).execute(query, eager=True)
+        except Exception as e:
+            return f"Erreur SQL : {e}"
+        note = ""
+        if result.height > MAX_RESULT_ROWS:
+            note = f"\n(résultat tronqué : {MAX_RESULT_ROWS} premières lignes sur {result.height})"
+            result = result.head(MAX_RESULT_ROWS)
+        with pl.Config(tbl_rows=MAX_RESULT_ROWS, tbl_cols=-1, fmt_str_lengths=80):
+            return str(result) + note
+
+    schema = "\n".join(f"- {c} ({t})" for c, t in zip(df.columns, df.dtypes))
+    system_prompt = (
+        "Tu es un data analyste. L'utilisateur a importé un fichier disponible dans la "
+        f"table SQL `data` ({df.height} lignes). Colonnes :\n{schema}\n\n"
+        "Utilise l'outil run_sql pour calculer les réponses à partir des données réelles ; "
+        "n'invente jamais de chiffres. Réponds en français, de façon courte et claire, "
+        "avec les chiffres clés et une phrase d'interprétation métier."
+    )
+
+    for msg in st.session_state.chat:
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
+
+    question = st.chat_input("Ex. : Quels sont les 5 produits qui rapportent le plus ?")
+    if question:
+        st.session_state.chat.append({"role": "user", "content": question})
+        with st.chat_message("user"):
+            st.markdown(question)
+
+        with st.chat_message("assistant"):
+            with st.spinner("Analyse en cours..."):
+                client = anthropic.Anthropic(api_key=api_key)
+                try:
+                    runner = client.beta.messages.tool_runner(
+                        model=MODEL,
+                        max_tokens=16000,
+                        system=system_prompt,
+                        thinking={"type": "adaptive"},
+                        output_config={"effort": "medium"},
+                        betas=["server-side-fallback-2026-07-01"],
+                        fallbacks="default",
+                        tools=[run_sql],
+                        messages=list(st.session_state.chat),
+                    )
+                    final = None
+                    for message in runner:
+                        final = message
+                except anthropic.AuthenticationError:
+                    st.error("Clé API invalide.")
+                    st.session_state.chat.pop()
+                    st.stop()
+                except anthropic.RateLimitError:
+                    st.error("Trop de requêtes, réessayez dans quelques secondes.")
+                    st.session_state.chat.pop()
+                    st.stop()
+                except anthropic.APIStatusError as e:
+                    st.error(f"Erreur de l'API ({e.status_code}) : {e.message}")
+                    st.session_state.chat.pop()
+                    st.stop()
+                except anthropic.APIConnectionError:
+                    st.error("Connexion à l'API impossible. Vérifiez votre connexion internet.")
+                    st.session_state.chat.pop()
+                    st.stop()
+
+            if final is None or final.stop_reason == "refusal":
+                answer = "Je ne peux pas répondre à cette question."
+            else:
+                answer = "\n".join(b.text for b in final.content if b.type == "text").strip()
+                answer = answer or "Je n'ai pas trouvé de réponse."
+            st.markdown(answer)
+            st.session_state.chat.append({"role": "assistant", "content": answer})
