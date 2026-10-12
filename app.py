@@ -74,6 +74,11 @@ def load_source(file, file_id: str, name: str):
     st.session_state.chat = []
 
 
+if uploaded_file is None and "demo" in st.query_params and st.session_state.file_id is None:
+    # Lien direct vers la démo : ...streamlit.app/?demo=1
+    with open(SAMPLE_PATH, "rb") as f:
+        load_source(f, "sample", "ventes_exemple.csv")
+
 if uploaded_file is not None:
     if st.session_state.file_id != uploaded_file.file_id:
         load_source(uploaded_file, uploaded_file.file_id, uploaded_file.name)
